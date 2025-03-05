@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Taeyung Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#videos">Videos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="assets/images/taehyung.jpg" alt="Kim Taeyung">
+            <div class="text">
+                <h2>Kim Taeyung</h2>
+                <p>I am a singer, dancer, and actor.</p>
+                <p>Applying as a choreographer.</p>
+                <div class="buttons">
+                    <button class="btn">Hire Me</button>
+                    <button class="btn">Contact Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Kim Taeyung, a passionate performer with a love for music, dance, and acting.</p>
+        <p>With years of experience on stage and screen, I bring creativity and energy to every project.</p>
+    </section>
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
